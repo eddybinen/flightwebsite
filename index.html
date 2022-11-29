@@ -14,19 +14,34 @@
     />
   </head>
   <body style="padding: 40px;">
+    <form>
+      <label for="width">Width:</label><br>
+      <input type="text" id="width" name="width"><br>
+      <label for="height">Height:</label><br>
+      <input type="text" id="height" name="height">
+      <button onclick="ResizeImage()">Resize Image</button>
+    </form>
+    <br>
     <h1>Välkommen till Chile Airlines</h1>
     <p>Visste du att Chile är det längsta landet?</p>
-
+    <p>Visste du att Chile är det längsta landet?</p>
     <button style="margin: 0 0 15px; background: blue; color: white;" onclick="Move('left')">Vänster</button>
     <button style="margin: 0 0 15px;" onclick="Move('right')">Höger</button>
+    
     <br />
-    <img align="left" id="bild" src="flygplan.jpg" />
+    <img align="left"id="bild" src="flygplan.jpg" />
 
     <script>
       const bild = document.getElementById("bild");
+      const width = document.getElementById("width")
+      const height = document.getElementById("height")
 
       function Move(destination) {
         bild.setAttribute("align", destination);
+      }
+      function ResizeImage() {
+        bild.setAttribute("width", width.value)
+        bild.setAttribute("height", height.value);
       }
     </script>
   </body>
