@@ -26,6 +26,7 @@
     </form>
     <br>
     <button onclick="ResizeImage()">Resize Image</button>
+    <button style="float:right" onclick="WildCard()">WildCard</button>
     <br>
     <br>
     <button style="margin: 0 0 15px; background: blue; color: white;" onclick="Move('left')">Vänster</button>
@@ -45,6 +46,12 @@
       function ResizeImage() {
         bild.setAttribute("width", width.value)
         bild.setAttribute("height", height.value);
+      }
+      function WildCard() {
+        let v1 = Math.floor(Math.random() * 1000)
+        let v2 = Math.floor(Math.random() * 1000)
+        bild.setAttribute("width", v1)
+        bild.setAttribute("height", v2);
       }
     </script>
   </body>
