@@ -11,7 +11,19 @@
 <body>
     <h1>Välkommen till Chile Airlines</h1>
     <p>Visste du att Chile är det längsta landet?</p>
-    <button>Boka resa</button>
-    <img align="right" src="flygplan.jpg"/>
+    
+    <button id="buttonMitten">Mitten</button>
+    <button id="buttonHöger">Höger</button>
+    <button id="buttonVänster">Vänster</button>
+    <img align="right" id="bild" src="flygplan.jpg"/>
+
+    <script>
+      function move(){
+        const button = document.querySelector("button");
+
+        button.setAttribute("name", "helloButton");
+        button.setAttribute("disabled", "");
+      }    
+    </script>
 </body>
 </html>
